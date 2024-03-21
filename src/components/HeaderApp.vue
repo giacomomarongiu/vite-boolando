@@ -1,8 +1,14 @@
 <script>
 export default {
     name: "AppHeader",
-
+    data() {
+        return {
+            listHeader: ["Donna", "Uomo", "Bambino"],
+            iconsHeader: ["fa-solid fa-user", "fa-regular fa-heart", "fa-solid fa-bag-shopping"]
+        }
+    }
 }
+
 
 </script>
 
@@ -12,22 +18,16 @@ export default {
         <nav class="header_container d-flex container_75">
             <div class="nav_left">
                 <ul>
-                    <li>Donna</li>
-                    <li>Uomo</li>
-                    <li>Bambini</li>
+                    <li v-for="item in listHeader">{{ item }}</li>
                 </ul>
             </div>
             <img class="nav_logo" src="/public/img/boolean-logo.png" alt="">
             <div class="nav_right">
-                <i class="fa-solid fa-user"></i>
-                <i class="fa-regular fa-heart"></i>
-                <i class="fa-solid fa-bag-shopping"></i>
+                <i v-for="icon in iconsHeader" :class="icon"></i>
             </div>
         </nav>
     </header>
     <!--end of the header-->
 </template>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>

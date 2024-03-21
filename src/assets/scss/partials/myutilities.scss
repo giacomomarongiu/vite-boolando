@@ -1,3 +1,5 @@
+@use '/src/assets/scss/partials/variables' as *;
+
 /*Utilities*/
 
 .container_75 {
@@ -32,14 +34,14 @@
 }
 
 .green {
-    background-color: green;
+    background-color: $greenBanner;
     padding: 2%;
     padding-left: 4%;
     padding-right: 4%;
 }
 
 .discount {
-    background-color: red;
+    background-color: $discountColor;
     padding: 2%;
     padding-left: 4%;
     padding-right: 4%;
