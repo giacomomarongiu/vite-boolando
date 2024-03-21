@@ -9,48 +9,48 @@ export default {
                     hoverImg: "/public/img/1b.webp",
                     brand: "Levi's",
                     description: "RELAXED FIT TEE UNISEX",
-                    priceNow: "14,99 € ",
-                    priceOld: "69,99 € ",
+                    priceNow: "14,99€ ",
+                    priceOld: "69,99€ ",
                 },
                 {
                     mainImg: "/public/img/2.webp",
                     hoverImg: "/public/img/2b.webp",
                     brand: "Zara",
                     description: "SLIM FIT",
-                    priceNow: "14,99 € ",
-                    priceOld: "19,99 € ",
+                    priceNow: "14,99€ ",
+                    priceOld: "19,99€ ",
                 },
                 {
                     mainImg: "/public/img/3.webp",
                     hoverImg: "/public/img/3b.webp",
                     brand: "Dolce & Gabbana",
                     description: "NORMAL FIT",
-                    priceNow: "14,99 € ",
-                    priceOld: "22,99 € ",
+                    priceNow: "14,99€ ",
+                    priceOld: "22,99€ ",
                 },
                 {
                     mainImg: "/public/img/4.webp",
                     hoverImg: "/public/img/4b.webp",
                     brand: "Hugo Boss",
                     description: "NORMAL FIT",
-                    priceNow: "14,99 € ",
-                    priceOld: "19,99 € ",
+                    priceNow: "14,99€ ",
+                    priceOld: "19,99€ ",
                 },
                 {
                     mainImg: "/public/img/5.webp",
                     hoverImg: "/public/img/5b.webp",
                     brand: "OVS",
                     description: "RELAXED FIT TEE UNISEX",
-                    priceNow: "14,99 € ",
-                    priceOld: "59,99 € ",
+                    priceNow: "14,99€ ",
+                    priceOld: "59,99€ ",
                 },
                 {
                     mainImg: "/public/img/6.webp",
                     hoverImg: "/public/img/6b.webp",
                     brand: "Primark",
                     description: "SLIM FIT",
-                    priceNow: "14,99 € ",
-                    priceOld: "22,99 € ",
+                    priceNow: "14,99€ ",
+                    priceOld: "22,99€ ",
                 },
                 
             ]
@@ -83,7 +83,7 @@ export default {
                         <div class="heart">&hearts;</div>
                         <div class="btn_img ">
                             <span class="discount">-50% </span>
-                            <span class="green">Sostenibilità</span>
+                            <span class="green text">Sostenibilità</span>
                         </div>
                     </div>
                 </div>
