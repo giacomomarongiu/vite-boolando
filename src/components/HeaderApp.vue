@@ -30,10 +30,5 @@ export default {
 
 <style lang="scss">
 
-$primaryColor:  rgb(248, 163, 4);
-
-header{
-    background-color: $primaryColor;
-}
 
 </style>

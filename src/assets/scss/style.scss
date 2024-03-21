@@ -1,0 +1,33 @@
+@use '/src/assets/scss/partials/variables' as *;
+
+header {
+    width: 100%;
+    height: auto;
+    background-color: $primaryColor;
+
+    .header_container {
+        max-width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        color: $lightColor;
+        font-size: small;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    ul {
+        display: flex;
+        margin: 0;
+        list-style: none;
+        padding: 0%;
+
+        li {
+            padding-right: 10px;
+        }
+    }
+
+    .nav_logo {
+        max-height: 20px;
+        width: auto;
+    }
+}

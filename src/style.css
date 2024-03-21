@@ -56,44 +56,6 @@
 
 
 
-/*header things*/
-header {
-    width: 100%;
-    height: auto;
-
-}
-
-.header_container {
-    max-width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    font-size: small;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
-/*Fix left side of the navigation bar*/
-ul {
-    display: flex;
-    margin: 0;
-    list-style: none;
-    padding: 0%;
-}
-
-li {
-    padding-right: 10px;
-}
-
-/*fix logo*/
-.nav_logo {
-    max-height: 20px;
-    width: auto;
-}
-
-/*end of the header area*/
-
-
 
 /*Main area*/
 .main_container,
