@@ -5,7 +5,17 @@ export default {
 
     props: {
         product: Object
-    }
+    },
+    data() {
+        return {
+            
+        }
+    },
+    methods: {
+        myFavoriteListChild() {
+            this.$parent.myFavoriteList();
+        }
+    },
     
 }
 </script>
@@ -20,7 +30,7 @@ export default {
                 <img class="hover_image" :src="product.hoverImg">
                 <div class="heart" @click="
                 (product.likeIt = product.likeIt ? false : true);
-                'this.myFavoriteList()'
+                this.myFavoriteListChild();
                 " :class="{ 'like-it': product.likeIt }">
                     <a><i class="fa-solid fa-heart"></i></a>
                 </div>

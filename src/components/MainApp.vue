@@ -39,7 +39,7 @@ export default {
 <template>
     <!--Main with 1row divided by column (1/3 of row)-->
     <main>
-        <div @click="this.myFavoriteList()" class="main_container container_75">
+        <div class="main_container container_75">
             <div class="row d-flex">
                 <CardApp :product="product" v-for="product in products" />
             </div>

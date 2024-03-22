@@ -4,12 +4,10 @@ export default {
     data() {
         return {
             listHeader: ["Donna", "Uomo", "Bambino"],
-            iconsHeader: ["fa-solid fa-user", "fa-regular fa-heart", "fa-solid fa-bag-shopping"]
+            iconsHeader: ["fa-solid fa-user", "fa-regular fa-heart" , "fa-solid fa-bag-shopping"]
         }
-    }
+    },
 }
-
-
 </script>
 
 <template>
