@@ -35,19 +35,19 @@
 
 .green {
     background-color: $greenBanner;
-    padding: 2%;
-    padding-left: 4%;
-    padding-right: 4%;
-    max-width:100%;
-    .text{
-        max-width: fit-content;
-    }
+    max-width: 100%;
+    padding-left: 6px;
+    padding-right: 6px;
+
 }
 
 .discount {
     background-color: $discountColor;
-    padding: 2%;
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: 6px;
+    padding-right: 6px;
     max-width: 100%;
+}
+
+.like-it {
+    color: red;
 }

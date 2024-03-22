@@ -53,11 +53,7 @@ header {
 .hover_image {
     max-width: 100%;
 }
-.card {
-    position: relative;
-    /*need it for buttons*/
 
-}
 
 /*How to change image*/
 .hover_image {
@@ -74,6 +70,7 @@ header {
 
 /*end how to change image*/
 
+
 /*buttons colours*/
 p> :first-child {
     color: $discountColor;
@@ -84,27 +81,31 @@ p> :nth-child(2) {
 }
 
 /*buttons position inside the card*/
-.heart,
-.btn_img {
-    position: absolute;
+.card_up{
+    position: relative;
 }
 
-.heart {
-    top: 1%;
-    right: 0;
-    background-color: $lightColor;
-    padding: 1%;
-    padding-left: 3%;
-    padding-right: 3%;
-}
+    .heart {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: $lightColor;
+        padding: 1%;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
 
-.btn_img {
-    display: flex;
-    gap: 1%;
-    color: $lightColor;
-    bottom: 20%;
-    max-width: 50%;
-}
+    .btn_img {
+        max-width: 100%;
+        position: absolute;
+        top: 85%;
+        display: flex;
+        color: $lightColor;
+        max-width: 50%;
+    }
+
+
+
 
 /*end of the main area*/
 

@@ -17,6 +17,18 @@ export default {
             <div class="card_up">
                 <img class="main_image" :src="product.mainImg">
                 <img class="hover_image" :src="product.hoverImg">
+                <div class="heart" @click="product.likeIt = product.likeIt ? false : true"
+                    :class="{ 'like-it': product.likeIt }">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="btn_img ">
+                    <span class="discount">{{ product.badges[1].value }}%</span>
+                    <span class="green" v-if="product.badges[0].value">
+                        <span class=" green-text ">
+                            {{ product.badges[0].value }}
+                        </span>
+                    </span>
+                </div>
             </div>
             <div class="card_bottom">
                 <p class="small_text">{{ product.brand }}</p>
@@ -26,11 +38,7 @@ export default {
                     <span class="">{{ product.priceOld }}€</span>
                 </p>
             </div>
-            <div class="heart">&hearts;</div>
-            <div class="btn_img ">
-                <span class="discount">{{ product.badges[1].value }}%</span>
-                <span class="green text">Sostenibilità</span>
-            </div>
+
         </div>
     </div>
 </template>
