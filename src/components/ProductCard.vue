@@ -22,13 +22,13 @@ export default {
                 <p class="small_text">{{ product.brand }}</p>
                 <p class="text_bold">{{ product.description }}</p>
                 <p class="€ small_text">
-                    <span class="text_bold">{{ product.priceNow }}</span>
-                    <span class="">{{ product.priceOld }}</span>
+                    <span class="text_bold"> {{ product.priceNew.toFixed(2) }}€ </span>
+                    <span class="">{{ product.priceOld }}€</span>
                 </p>
             </div>
             <div class="heart">&hearts;</div>
             <div class="btn_img ">
-                <span class="discount">-50% </span>
+                <span class="discount">{{ product.badges[1].value }}%</span>
                 <span class="green text">Sostenibilità</span>
             </div>
         </div>

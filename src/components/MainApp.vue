@@ -1,15 +1,29 @@
 <script>
-import {products} from "../data.js"
+import { products } from "../data.js"
 import CardApp from "../components/ProductCard.vue";
 export default {
     name: "AppMain",
-    components:{
+    components: {
         CardApp
     },
     data() {
         return {
-           products,
+            products,
         }
+    },
+    methods: {
+        randomDiscont() {
+            this.products.forEach(product => {
+                console.log(product);
+                product.badges[1].value = Math.floor(Math.random() * 100);
+                console.log(product.badges[1].value)
+                product.priceNew = product.priceOld - (product.priceOld * product.badges[1].value / 100)
+                console.log(product.priceNew.toFixed(2));
+            });
+        }
+    },
+    beforeMount() {
+        this.randomDiscont()
     },
 }
 </script>
@@ -20,7 +34,7 @@ export default {
         <div class="main_container container_75">
             <div class="row d-flex">
                 <CardApp :product="product" v-for="product in products" />
-                
+
             </div>
         </div>
     </main>
