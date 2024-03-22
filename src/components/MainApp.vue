@@ -14,11 +14,11 @@ export default {
     methods: {
         randomDiscont() {
             this.products.forEach(product => {
-                console.log(product);
-                product.badges[1].value = Math.floor(Math.random() * 100);
-                console.log(product.badges[1].value)
+                //console.log(product);
+                product.badges[1].value = Math.floor(Math.random() * 90);
+                //console.log(product.badges[1].value)
                 product.priceNew = product.priceOld - (product.priceOld * product.badges[1].value / 100)
-                console.log(product.priceNew.toFixed(2));
+                //console.log(product.priceNew.toFixed(2));
             });
         }
     },

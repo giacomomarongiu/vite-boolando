@@ -21,7 +21,7 @@ export default {
             <div class="card_bottom">
                 <p class="small_text">{{ product.brand }}</p>
                 <p class="text_bold">{{ product.description }}</p>
-                <p class="€ small_text">
+                <p class="small_text">
                     <span class="text_bold"> {{ product.priceNew.toFixed(2) }}€ </span>
                     <span class="">{{ product.priceOld }}€</span>
                 </p>
