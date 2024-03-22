@@ -1,6 +1,10 @@
 <script>
+import CardApp from "../components/ProductCard.vue";
 export default {
     name: "AppMain",
+    components:{
+        CardApp
+    },
     data() {
         return {
             myCards: [
@@ -64,29 +68,7 @@ export default {
     <main>
         <div class="main_container container_75">
             <div class="row d-flex">
-                <div class="col4" v-for="card in myCards">
-                    <!--Card is all the containter with three things:
-                         images, text and buttons(buttons are moved inside the card)  -->
-                    <div class="card">
-                        <div class="card_up">
-                            <img class="main_image" :src="card.mainImg">
-                            <img class="hover_image" :src="card.hoverImg">
-                        </div>
-                        <div class="card_bottom">
-                            <p class="small_text">{{ card.brand }}</p>
-                            <p class="text_bold">{{ card.description }}</p>
-                            <p class="€ small_text">
-                                <span class="text_bold">{{ card.priceNow}}</span>
-                                <span class="">{{ card.priceOld}}</span>
-                            </p>
-                        </div>
-                        <div class="heart">&hearts;</div>
-                        <div class="btn_img ">
-                            <span class="discount">-50% </span>
-                            <span class="green text">Sostenibilità</span>
-                        </div>
-                    </div>
-                </div>
+                <CardApp :product="product" v-for="product in myCards" />
 
             </div>
         </div>
