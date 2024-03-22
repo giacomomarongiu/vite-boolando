@@ -9,10 +9,11 @@ export default {
     data() {
         return {
             products,
+            myFavorite:[],
         }
     },
     methods: {
-        randomDiscont() {
+        randomDiscount() {
             this.products.forEach(product => {
                 //console.log(product);
                 product.badges[1].value = Math.floor(Math.random() * 90);
@@ -20,10 +21,17 @@ export default {
                 product.priceNew = product.priceOld - (product.priceOld * product.badges[1].value / 100)
                 //console.log(product.priceNew.toFixed(2));
             });
+        },
+        myFavoriteList(){
+            this.myFavorite=this.products.filter(product => {
+                if (product.likeIt){return true}
+            });
+            console.log(this.myFavorite);
         }
     },
-    beforeMount() {
-        this.randomDiscont()
+    mounted() {
+        this.randomDiscount();
+        this.myFavoriteList();
     },
 }
 </script>
@@ -31,10 +39,9 @@ export default {
 <template>
     <!--Main with 1row divided by column (1/3 of row)-->
     <main>
-        <div class="main_container container_75">
+        <div @click="this.myFavoriteList()" class="main_container container_75">
             <div class="row d-flex">
                 <CardApp :product="product" v-for="product in products" />
-
             </div>
         </div>
     </main>

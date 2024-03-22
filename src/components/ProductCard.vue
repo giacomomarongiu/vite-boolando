@@ -6,6 +6,7 @@ export default {
     props: {
         product: Object
     }
+    
 }
 </script>
 
@@ -17,9 +18,11 @@ export default {
             <div class="card_up">
                 <img class="main_image" :src="product.mainImg">
                 <img class="hover_image" :src="product.hoverImg">
-                <div class="heart" @click="product.likeIt = product.likeIt ? false : true"
-                    :class="{ 'like-it': product.likeIt }">
-                    <i class="fa-solid fa-heart"></i>
+                <div class="heart" @click="
+                (product.likeIt = product.likeIt ? false : true);
+                'this.myFavoriteList()'
+                " :class="{ 'like-it': product.likeIt }">
+                    <a><i class="fa-solid fa-heart"></i></a>
                 </div>
                 <div class="btn_img ">
                     <span class="discount">{{ product.badges[1].value }}%</span>
