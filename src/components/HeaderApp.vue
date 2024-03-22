@@ -1,10 +1,13 @@
 <script>
 export default {
     name: "AppHeader",
+    props: {
+        favorite: Object
+    },
     data() {
         return {
             listHeader: ["Donna", "Uomo", "Bambino"],
-            iconsHeader: ["fa-solid fa-user", "fa-regular fa-heart" , "fa-solid fa-bag-shopping"]
+            iconsHeader: ["fa-solid fa-user" , "fa-solid fa-bag-shopping"]
         }
     },
 }
@@ -22,6 +25,11 @@ export default {
             <img class="nav_logo" src="/public/img/boolean-logo.png" alt="">
             <div class="nav_right">
                 <i v-for="icon in iconsHeader" :class="icon"></i>
+                <i class=" fa-regular fa-heart">
+                    <ul>
+                        <li><!-- {{favorite.id}} --></li>
+                    </ul>
+                </i>
             </div>
         </nav>
     </header>
