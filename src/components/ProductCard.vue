@@ -1,6 +1,7 @@
 <script>
 
 export default {
+    myBadgeValue: "",
     name: "ProductCard",
 
     props: {
@@ -8,15 +9,30 @@ export default {
     },
     data() {
         return {
-            
+
         }
     },
     methods: {
         myFavoriteListChild() {
             this.$parent.myFavoriteList();
+        },
+
+        badgesManager(string) {
+            //Ciclo tra i badges
+            this.product.badges.forEach(badge => {
+                //Verifico se esiste il tipo di badge
+                if (badge.type == string) {
+                    //console.log(badge.value);
+                    // gestistico il caso in cui sia undefined
+                    /*                     if (badge.value == undefined) { return this.myBadgeValue=true } */
+                    this.myBadgeValue = badge.value
+                    return true
+
+                } else { return false }
+            });
         }
     },
-    
+
 }
 </script>
 
@@ -29,18 +45,26 @@ export default {
                 <img class="main_image" :src="product.mainImg">
                 <img class="hover_image" :src="product.hoverImg">
                 <div class="heart" @click="
-                (product.likeIt = product.likeIt ? false : true);
+                    (product.likeIt = product.likeIt ? false : true);
                 this.myFavoriteListChild();
                 " :class="{ 'like-it': product.likeIt }">
                     <a><i class="fa-solid fa-heart"></i></a>
                 </div>
-                <div class="btn_img ">
-                    <span class="discount">{{ product.badges[1].value }}%</span>
-                    <span class="green" v-if="product.badges[0].value">
-                        <span class=" green-text ">
-                            {{ product.badges[0].value }}
+                <div class="btn_img">
+
+                    <span class="discount" v-if="this.badgesManager('discount') != false">
+                        <span v-if="this.myBadgeValue">
+                            {{ this.myBadgeValue }}%
+                        </span>
+
+                    </span>
+
+                    <span v-if="this.badgesManager('tag') != false" class="green">
+                        <span v-if="this.myBadgeValue" class=" green-text ">
+                            {{ this.myBadgeValue }}
                         </span>
                     </span>
+
                 </div>
             </div>
             <div class="card_bottom">

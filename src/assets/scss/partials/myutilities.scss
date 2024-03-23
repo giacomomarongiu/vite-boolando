@@ -36,8 +36,11 @@
 .green {
     background-color: $greenBanner;
     max-width: 100%;
-    padding-left: 6px;
-    padding-right: 6px;
+
+    .green-text {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
 
 }
 

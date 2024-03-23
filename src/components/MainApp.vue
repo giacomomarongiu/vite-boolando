@@ -16,6 +16,8 @@ export default {
         randomDiscount() {
             this.products.forEach(product => {
                 //console.log(product);
+                //SE esiste il tag "discount" genero uno sconto random
+                product.badge
                 product.badges[1].value = Math.floor(Math.random() * 90);
                 //console.log(product.badges[1].value)
                 product.priceNew = product.priceOld - (product.priceOld * product.badges[1].value / 100)
@@ -27,7 +29,8 @@ export default {
                 if (product.likeIt){return true}
             });
             console.log(this.myFavorite);
-        }
+        },
+
     },
     mounted() {
         this.randomDiscount();
