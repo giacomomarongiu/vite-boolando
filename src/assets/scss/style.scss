@@ -50,7 +50,24 @@ header {
 
 
 /*Main area*/
+.favorites{
+    max-height: 60px;
+    width: 30%;
+
+
+    .favorite-item{
+        max-width: 100%;
+        object-fit: contain;
+    }
+}
+
+.products{
+
+}
+
+
 .main_container,
+.favorite-item-img,
 .card,
 .card_up,
 .main_image,
@@ -97,13 +114,12 @@ p> :nth-child(2) {
         padding-right: 3%;
     }
 
-    .btn_img {
+    .badges {
         max-width: 100%;
         position: absolute;
         top: 85%;
         display: flex;
         color: $lightColor;
-        max-width: 50%;
     }
 
 }

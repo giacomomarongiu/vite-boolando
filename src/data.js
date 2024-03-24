@@ -100,9 +100,7 @@ export const products = [
         description: "SLIM FIT",
         priceOld: 22.99,
         badges: [
-            {
-                type: "tag",
-            },
+
             {
                 type: "discount",
                 value: 10

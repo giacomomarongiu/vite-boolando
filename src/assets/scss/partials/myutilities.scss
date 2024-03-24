@@ -11,12 +11,28 @@
     display: flex;
 }
 
+.justify-content-center{
+    justify-content: center;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
 .row {
     flex-wrap: wrap;
     padding-top: 5%;
     padding-bottom: 5%;
     margin-left: -1rem;
     margin-right: -1rem;
+}
+
+.col12{
+    width: 100% ;
 }
 
 .col4 {
@@ -33,7 +49,11 @@
     font-weight: bold;
 }
 
-.green {
+.text-center{
+    text-align: center;
+}
+
+.tag {
     background-color: $greenBanner;
     max-width: 100%;
     padding-left: 6px;
@@ -42,7 +62,7 @@
 
 .discount {
     background-color: $discountColor;
-    max-width: 100%;
+
     padding-left: 6px;
     padding-right: 6px;
 
