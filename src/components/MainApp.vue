@@ -9,31 +9,35 @@ export default {
     data() {
         return {
             products,
-            myFavorite:[],
+            myFavorite: [],
         }
     },
     methods: {
-        randomDiscount() {
+/*         randomDiscount() {
             this.products.forEach(product => {
                 //console.log(product);
-                //SE esiste il tag "discount" genero uno sconto random
-                product.badge
-                product.badges[1].value = Math.floor(Math.random() * 90);
-                //console.log(product.badges[1].value)
-                product.priceNew = product.priceOld - (product.priceOld * product.badges[1].value / 100)
-                //console.log(product.priceNew.toFixed(2));
+                product.badges.forEach((badge) => {
+                    //console.log(badge.type);
+                    //SE esiste il tag "discount" genero uno sconto random
+                    if (badge.type == "discount") {
+                        badge.value = Math.floor(Math.random() * 90);
+                        //console.log(product.badges[1].value)
+                        product.priceNew = product.priceOld - (product.priceOld * badge.value / 100)
+                        //console.log(product.priceNew.toFixed(2));
+                    }
+                });
             });
-        },
-        myFavoriteList(){
-            this.myFavorite=this.products.filter(product => {
-                if (product.likeIt){return true}
+        }, */
+        myFavoriteList() {
+            this.myFavorite = this.products.filter(product => {
+                if (product.likeIt) { return true }
             });
             console.log(this.myFavorite);
         },
 
     },
     mounted() {
-        this.randomDiscount();
+        //this.randomDiscount();
         this.myFavoriteList();
     },
 }

@@ -14,10 +14,10 @@ export const products = [
             },
             {
                 type: "discount",
-                value: 0
+                value: 10
             }
         ],
-        priceNew: 1,
+        priceNew: 59.99,
         likeIt: false,
     },
     {
@@ -26,17 +26,15 @@ export const products = [
         hoverImg: "/public/img/2b.webp",
         brand: "Zara",
         description: "SLIM FIT",
-        priceOld: 19.99,
+        priceOld: 9.99,
         badges: [
-            {
-                type: "tag",
-            },
+
             {
                 type: "discount",
-                value: 0
+                value: 10
             }
         ],
-        priceNew: 1,
+        priceNew: 9.99,
         likeIt: true,
 
     },
@@ -46,18 +44,15 @@ export const products = [
         hoverImg: "/public/img/3b.webp",
         brand: "Dolce & Gabbana",
         description: "NORMAL FIT",
-        priceOld: 22.99,
+        priceOld: 12.99,
         badges: [
-            {
+/*             {
                 type: "tag",
                 value: "Sostenibilità"
-            },
-            {
-                type: "discount",
-                value: 0
-            }
+            }, */
+
         ],
-        priceNew: 1,
+        priceNew: 13.99,
         likeIt: false,
     },
     {
@@ -66,18 +61,15 @@ export const products = [
         hoverImg: "/public/img/4b.webp",
         brand: "Hugo Boss",
         description: "NORMAL FIT",
-        priceOld: 19.99,
+        priceOld: 18.99,
         badges: [
             {
                 type: "tag",
                 value: "Sostenibilità"
             },
-            {
-                type: "discount",
-                value: 0
-            }
+
         ],
-        priceNew: 1,
+        priceNew: 15.99,
         likeIt: true,
     },
     {
@@ -94,10 +86,10 @@ export const products = [
             },
             {
                 type: "discount",
-                value: 0
+                value: 10
             }
         ],
-        priceNew: 1,
+        priceNew: 29.99,
         likeIt: false,
     },
     {
@@ -113,10 +105,10 @@ export const products = [
             },
             {
                 type: "discount",
-                value: 0
+                value: 10
             }
         ],
-        priceNew: 1,
+        priceNew: 8.99,
         likeIt: true,
     },
 ]

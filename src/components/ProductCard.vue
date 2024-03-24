@@ -13,25 +13,44 @@ export default {
         }
     },
     methods: {
+        /** Funzione che eredita la funzionalità del componente genitore
+         * 
+         */
         myFavoriteListChild() {
             this.$parent.myFavoriteList();
         },
 
-        badgesManager(string) {
+        /** Riceve in input una stringa, se quella stringa coincide con uno dei tipi
+         * di badge presenti nell'array modifica il valore di myBadgeValue con il valore
+         * del badge coincidente
+         * 
+         * @param {string}  badgetype
+         */
+        badgesManager(badgetype) {
+            // Ripulisco il valore di myBadgeValue
+            this.myBadgeValue = "";
             //Ciclo tra i badges
-            this.product.badges.forEach(badge => {
+            //Verifico l'id del mio oggetto e il valore della stringa in input
+            //console.log(this.product.id);
+            //console.log(badgetype);
+            //Ciclo all'intero dell'array badges
+            this.product.badges.forEach((badge, index) => {
+                //Verifco se l'index è corretto
+                //console.log([index])
                 //Verifico se esiste il tipo di badge
-                if (badge.type == string) {
-                    //console.log(badge.value);
-                    // gestistico il caso in cui sia undefined
-                    /*                     if (badge.value == undefined) { return this.myBadgeValue=true } */
+                // console.log(badge.type == badgetype);
+                if (badge.type == badgetype) {
+                    //Controllo se è quello giusto
+                    //console.log(badge.type);
                     this.myBadgeValue = badge.value
-                    return true
+                    // Verifco la corretta assegnazione
+                    //console.log(this.myBadgeValue);
 
-                } else { return false }
+                }
             });
         }
     },
+
 
 }
 </script>
@@ -52,15 +71,14 @@ export default {
                 </div>
                 <div class="btn_img">
 
-                    <span class="discount" v-if="this.badgesManager('discount') != false">
-                        <span v-if="this.myBadgeValue">
+                    <span v-if="this.badgesManager('discount') != false" class="">
+                        <span v-if="this.myBadgeValue" class="red-text discount">
                             {{ this.myBadgeValue }}%
                         </span>
-
                     </span>
 
-                    <span v-if="this.badgesManager('tag') != false" class="green">
-                        <span v-if="this.myBadgeValue" class=" green-text ">
+                    <span v-if="this.badgesManager('tag') != false" class="">
+                        <span v-if="this.myBadgeValue" class=" green-text green">
                             {{ this.myBadgeValue }}
                         </span>
                     </span>

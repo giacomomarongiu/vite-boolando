@@ -41,7 +41,8 @@ header {
         max-height: 20px;
         width: auto;
     }
-    i{
+
+    i {
         padding: 5px;
     }
 }
@@ -84,10 +85,8 @@ p> :nth-child(2) {
 }
 
 /*buttons position inside the card*/
-.card_up{
+.card_up {
     position: relative;
-}
-
     .heart {
         position: absolute;
         top: 0;
@@ -107,10 +106,11 @@ p> :nth-child(2) {
         max-width: 50%;
     }
 
-
-
+}
 
 /*end of the main area*/
+
+
 
 /*footer area*/
 footer {
@@ -123,6 +123,9 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 1%;
+    i{
+        padding: 5px;
+    }
 }
 
 /*end of the footer area*/

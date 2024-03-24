@@ -36,19 +36,16 @@
 .green {
     background-color: $greenBanner;
     max-width: 100%;
-
-    .green-text {
-        padding-left: 6px;
-        padding-right: 6px;
-    }
-
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 .discount {
     background-color: $discountColor;
+    max-width: 100%;
     padding-left: 6px;
     padding-right: 6px;
-    max-width: 100%;
+
 }
 
 .like-it {
