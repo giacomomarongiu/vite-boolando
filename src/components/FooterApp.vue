@@ -9,14 +9,11 @@ export default {
     <!--Footer with flex, left/right-->
     <footer>
         <div class="footer_container container_75 d-flex">
-            <div class="right_footer">
+            <div class="left_footer">
                 <p>Boolanado s.r.l</p>
                 <span class="small_text">Informazioni legali </span>
-                <span class="small_text">Informazioni legali </span>
-                <span class="small_text">Informazioni legali </span>
-
             </div>
-            <div class="left_footer">
+            <div class="right_footer">
                 <p>Trovaci anche su:</p>
                 <div>
                     <i class="fa-brands fa-twitter"></i>

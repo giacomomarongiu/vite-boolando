@@ -2,6 +2,7 @@
 import CardBadges from "../components/CardBadges.vue";
 export default {
     name: "ProductCard",
+    //Componente per inserire dinamicamente i badges
     components: {
         CardBadges
     },
@@ -25,11 +26,10 @@ export default {
 
 <template>
     <!-- Col/Card like Bootstrap-->
-    <div class="col4">
+    <div class="col-4 p-1">
         <div class="card">
-            <!-- Crad divided Up e Bottom-->
-            <!--Crad UP-->
-
+            <!-- Card divided Up e Bottom-->
+            <!--Card UP-->
             <div class="card_up">
                 <!--Change img on hover-->
                 <img class="main_image" :src="product.mainImg">
@@ -38,7 +38,7 @@ export default {
                 <!--Heart that call the Parent-Function on @click-->
                 <div class="heart" @click="
                     (product.likeIt = product.likeIt ? false : true); //This is something like toggle
-                    // Favorite list refreshed
+                // Favorite list refreshed
                 this.myFavoriteListChild();
                 // Add class if  like-it is True
                 " :class="{ 'like-it': product.likeIt }">
@@ -51,6 +51,7 @@ export default {
                 </div>
             </div>
 
+            <!--Card BOTTOM-->
             <div class="card_bottom">
                 <p class="small_text">{{ product.brand }}</p>
                 <p class="text_bold">{{ product.description }}</p>

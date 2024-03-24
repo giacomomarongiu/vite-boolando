@@ -13,18 +13,13 @@ export default {
 
 <template>
     <!-- Col/Card like Bootstrap-->
-    <div class="col4">
+    <div class="fav-col">
         <div class="favorite-item-card">
-            <!-- Crad divided Up e Bottom-->
-            <!--Crad UP-->
-
-            <!--Change img on hover-->
             <img class="favorite-item-img" :src="favorite.mainImg">
-
-
-            <p class="text_bold">{{ favorite.description }}</p>
-            <span class="text_bold"> {{ favorite.priceNew.toFixed(2) }}€ </span>
-
+            <div class="favorite-item-info">
+                <div class="favorite-item-text price"> {{ favorite.priceNew.toFixed(2) }}€ </div>
+                <div class="favorite-item-text brand"> {{ favorite.brand }} </div>
+            </div>
 
         </div>
     </div>

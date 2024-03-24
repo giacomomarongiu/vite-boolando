@@ -14,9 +14,12 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
-  <AppMain />
-  <AppFooter />
+  <div id="site-container">
+    <AppHeader />
+    <AppMain />
+    <AppFooter />
+  </div>
+
 </template>
 
 <style scoped></style>
