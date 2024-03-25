@@ -1,5 +1,6 @@
 <script>
 import CardBadges from "../components/CardBadges.vue";
+import { state } from '../state.js'
 export default {
     name: "ProductCard",
     //Componente per inserire dinamicamente i badges
@@ -11,15 +12,15 @@ export default {
     },
     data() {
         return {
+            state,
         }
     },
     methods: {
-        /** Funzione che eredita la funzionalità del componente genitore
-         * 
-         */
+/*         /** Funzione che eredita la funzionalità del componente genitore
+
         myFavoriteListChild() {
             this.$parent.myFavoriteList();
-        },
+        }, */
     },
 }
 </script>
@@ -39,7 +40,7 @@ export default {
                 <div class="heart" @click="
                     (product.likeIt = product.likeIt ? false : true); //This is something like toggle
                 // Favorite list refreshed
-                this.myFavoriteListChild();
+                this.state.myFavoriteList();
                 // Add class if  like-it is True
                 " :class="{ 'like-it': product.likeIt }">
                     <a><i class="fa-solid fa-heart"></i></a>

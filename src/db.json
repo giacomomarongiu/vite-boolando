@@ -7,7 +7,7 @@
             "brand": "Levi's",
             "description": "RELAXED FIT TEE UNISEX",
             "priceOld": 69.99,
-            "badges":[
+            "badges": [
                 {
                     "type": "tag",
                     "value": "Sostenibilità"
@@ -98,6 +98,60 @@
             ],
             "priceNew": 8.99,
             "likeIt": true
+        },
+        {
+            "id": 7,
+            "mainImg": "/public/img/6.webp",
+            "hoverImg": "/public/img/4b.webp",
+            "brand": "Asics",
+            "description": "Training Jacket",
+            "priceOld": 79.99,
+            "badges": [],
+            "priceNew": 79.99,
+            "likeIt": true
+        },
+        {
+            "id": 8,
+            "mainImg": "/public/img/3.webp",
+            "hoverImg": "/public/img/1b.webp",
+            "brand": "Converse",
+            "description": "Casual Sneakers",
+            "priceOld": 59.99,
+            "badges": [
+                {
+                    "type": "discount",
+                    "value": 15
+                }
+            ],
+            "priceNew": 50.99,
+            "likeIt": false
+        },
+        {
+            "id": 9,
+            "mainImg": "/public/img/2.webp",
+            "hoverImg": "/public/img/6b.webp",
+            "brand": "Vans",
+            "description": "Skateboard Shoes",
+            "priceOld": 49.99,
+            "badges": [],
+            "priceNew": 49.99,
+            "likeIt": true
+        },
+        {
+            "id": 10,
+            "mainImg": "/public/img/1.webp",
+            "hoverImg": "/public/img/2b.webp",
+            "brand": "Salomon",
+            "description": "Trail Running Shoes",
+            "priceOld": 129.99,
+            "badges": [
+                {
+                    "type": "tag",
+                    "value": "New Arrival"
+                }
+            ],
+            "priceNew": 129.99,
+            "likeIt": false
         }
     ]
 }
