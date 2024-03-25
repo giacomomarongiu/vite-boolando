@@ -1,8 +1,8 @@
 <script>
-import { state } from '../state'
-import { products } from "../data.js"
+//import { products } from "../data.js"
 import ProductCard from "../components/ProductCard.vue";
 import FavoritesItem from "../components/FavoritesItem.vue";
+import { state } from '../state.js'
 
 export default {
     name: "AppMain",
@@ -12,9 +12,9 @@ export default {
     },
     data() {
         return {
-            state: state,
+            state,
             //impotered
-            products,
+            //products,
             //An array that contain my favorite things
             myFavorite: [],
         }
@@ -49,13 +49,11 @@ export default {
 
     },
     mounted() {
+        console.log(this.state);
+        this.myProducts()
         //this.randomDiscount();
         this.myFavoriteList();
-        console.log(this.state);
-        /*         {
-                    axios.get(' http://localhost:3000/products')
-                    .
-                } */
+
     },
 }
 </script>
@@ -72,7 +70,7 @@ export default {
             </div>
 
             <div class="products-container row d-flex">
-                <ProductCard :product="product" v-for="product in products" />
+                <ProductCard :product="product" v-for="product in state.products" />
             </div>
         </div>
     </main>
