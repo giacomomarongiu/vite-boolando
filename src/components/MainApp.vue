@@ -1,9 +1,9 @@
 <script>
+import { state } from '../state'
 import { products } from "../data.js"
 import ProductCard from "../components/ProductCard.vue";
 import FavoritesItem from "../components/FavoritesItem.vue";
-/* import axios from 'axios';
- */
+
 export default {
     name: "AppMain",
     components: {
@@ -12,6 +12,7 @@ export default {
     },
     data() {
         return {
+            state: state,
             //impotered
             products,
             //An array that contain my favorite things
@@ -50,11 +51,11 @@ export default {
     mounted() {
         //this.randomDiscount();
         this.myFavoriteList();
-
-/*         {
-            axios.get(' http://localhost:3000/products')
-            .
-        } */
+        console.log(this.state);
+        /*         {
+                    axios.get(' http://localhost:3000/products')
+                    .
+                } */
     },
 }
 </script>
@@ -64,7 +65,7 @@ export default {
     <main class=" ">
 
         <div class="main_container container_75 d-flex flex-column justify-content-center">
-
+            <div>{{ state.message }}</div>
             <div v-if="myFavorite.length > 0"
                 class="favorites-container col-6 text-center d-flex justify-content-center ">
                 <FavoritesItem :favorite="item" v-for="item in myFavorite" />
