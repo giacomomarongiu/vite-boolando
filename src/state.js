@@ -11,9 +11,12 @@ export const state = reactive({
     myProducts() {
         axios.get('http://localhost:3000/products')
             .then((response) => {
+                //Verifico
                 console.log(response);
                 console.log(response.data);
+                //Assegno al mio array vuoto i prodotti
                 this.products = [...response.data]
+
                 // Genero la prima lista di preferiti
                 this.myFavoriteList();
             }

@@ -24,8 +24,6 @@ export default {
     created() {
         //console.log(this.state);
         this.state.myProducts()
-        //this.randomDiscount();
-
     },
     mounted(){
         this.state.myFavoriteList();
