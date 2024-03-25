@@ -8,7 +8,7 @@ export default {
 <template>
     <!--Footer with flex, left/right-->
     <footer>
-        <div class="footer_container container_75 d-flex">
+        <div class="footer_container container_75">
             <div class="left_footer">
                 <p>Boolanado s.r.l</p>
                 <span class="small_text">Informazioni legali </span>

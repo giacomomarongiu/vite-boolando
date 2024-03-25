@@ -1,0 +1,40 @@
+@use '/src/assets/scss/partials/variables' as *;
+@use '/src/assets/scss/partials/myutilities.scss' as *;
+
+/*header*/
+header {
+    width: 100%;
+    height: auto;
+    background-color: $primaryColor;
+
+    .header_container {
+        @include d-flex-between;
+        max-width: 100%;
+        color: $lightColor;
+        font-size: small;
+        padding-top: 1%;
+        padding-bottom: 1%;
+
+        ul {
+            display: flex;
+            margin: 0;
+            list-style: none;
+            padding: 0%;
+
+            li {
+                padding-right: 10px;
+            }
+        }
+
+        .nav_logo {
+            max-height: 20px;
+            width: auto;
+        }
+
+        i {
+            padding: 5px;
+        }
+
+
+    }
+}

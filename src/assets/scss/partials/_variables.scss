@@ -3,3 +3,16 @@ $darkColor: rgb(0, 0, 0); // Footer
 $discountColor: red;
 $greenBanner: green;
 $lightColor: white;
+
+
+@mixin d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin d-flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

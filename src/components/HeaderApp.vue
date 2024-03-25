@@ -13,7 +13,7 @@ export default {
 <template>
     <!--Header with 3 parts, containter for center-->
     <header>
-        <nav class="header_container d-flex container_75">
+        <nav class="header_container container_75">
 
             <!--left-->
             <div class="nav_left">

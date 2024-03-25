@@ -35,10 +35,10 @@ export default {
 
     <main class=" ">
 
-        <div class="main_container container_75 d-flex flex-column justify-content-center">
+        <div class="main_container container_75 flex-column">
             <!--             <div>{{ state.message }}</div>-->
             <div v-if="this.state.myFavorite.length > 0"
-                class="favorites-container col-6 text-center d-flex justify-content-center ">
+                class="favorites-container col-6 text-center ">
                 <FavoritesItem :favorite="item" v-for="item in state.myFavorite" />
             </div>
 

@@ -1,0 +1,19 @@
+@use '/src/assets/scss/partials/variables' as *;
+@use '/src/assets/scss/partials/myutilities.scss' as *;
+
+/*footer area*/
+footer {
+    width: 100%;
+    background-color: black;
+    color: $lightColor;
+}
+
+.footer_container {
+    @include d-flex-between;
+    padding: 1%;
+    i {
+        padding: 5px;
+    }
+}
+
+/*end of the footer area*/
