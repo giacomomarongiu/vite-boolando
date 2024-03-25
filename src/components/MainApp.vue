@@ -41,7 +41,7 @@ export default {
          * e contenre solo quelli che con il "like"         * 
          */
         myFavoriteList() {
-            this.myFavorite = this.products.filter(product => {
+            this.myFavorite = this.state.products.filter(product => {
                 if (product.likeIt) { return true }
             });
             console.log(this.myFavorite);
@@ -49,8 +49,10 @@ export default {
 
     },
     mounted() {
-        console.log(this.state);
-        this.myProducts()
+        //console.log(this.state);
+
+        this.state.myProducts()
+
         //this.randomDiscount();
         this.myFavoriteList();
 
@@ -63,7 +65,7 @@ export default {
     <main class=" ">
 
         <div class="main_container container_75 d-flex flex-column justify-content-center">
-            <div>{{ state.message }}</div>
+            <!--             <div>{{ state.message }}</div>-->
             <div v-if="myFavorite.length > 0"
                 class="favorites-container col-6 text-center d-flex justify-content-center ">
                 <FavoritesItem :favorite="item" v-for="item in myFavorite" />

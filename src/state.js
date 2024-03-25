@@ -12,7 +12,7 @@ export const state = reactive({
             .then((response) => {
                 console.log(response);
                 console.log(response.data);
-                this.products = response.data
+                this.products = [...response.data]
             }
             ).catch(err => {
                 console.error(err.message)
