@@ -2,7 +2,8 @@
 import { products } from "../data.js"
 import ProductCard from "../components/ProductCard.vue";
 import FavoritesItem from "../components/FavoritesItem.vue";
-
+/* import axios from 'axios';
+ */
 export default {
     name: "AppMain",
     components: {
@@ -49,6 +50,11 @@ export default {
     mounted() {
         //this.randomDiscount();
         this.myFavoriteList();
+
+/*         {
+            axios.get(' http://localhost:3000/products')
+            .
+        } */
     },
 }
 </script>
@@ -59,7 +65,8 @@ export default {
 
         <div class="main_container container_75 d-flex flex-column justify-content-center">
 
-            <div v-if="myFavorite.length>0" class="favorites-container col-6 text-center d-flex justify-content-center ">
+            <div v-if="myFavorite.length > 0"
+                class="favorites-container col-6 text-center d-flex justify-content-center ">
                 <FavoritesItem :favorite="item" v-for="item in myFavorite" />
             </div>
 
