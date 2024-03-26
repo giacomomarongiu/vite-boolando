@@ -23,14 +23,19 @@ export default {
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close" @click=" this.$emit('closeModal')">&times;</span>
-            <img class="main_image" :src="product.mainImg">
-            <!--Card BOTTOM-->
-            <div class="card_bottom">
-                <p class="small_text">{{ product.brand }}</p>
-                <p class="text_bold">{{ product.description }}</p>
-                <p class="small_text">
-                    <span class="text_bold"> {{ product.priceNew.toFixed(2) }}€ </span>
-                </p>
+            <div class="modal-container">
+                <div class="col-modal">
+                    <img class="main_image col-modal" :src="product.mainImg">
+                    <img class="main_image col-modal" :src="product.hoverImg">
+                </div>
+                <div class="col-modal">
+                    <p class="small_text">{{ product.brand }}</p>
+                    <p class="text_bold">{{ product.description }}</p>
+                    <p class="small_text">Lo paghi solo
+                        <span class="text_bold" style="color: red;"> {{ product.priceNew.toFixed(2) }}€ </span>
+                    </p>
+                </div>
+
             </div>
         </div>
     </div>
@@ -40,13 +45,29 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.modal-content {
-    max-width: 300px;
+.modal-content{
+max-width: 600px;
+display: flex;
+justify-content:center
+}
+.modal-container {
+    max-width: 100%;
+    display: flex;
+    justify-content:space-between ;
 
-    .main_image {
+    .imgs {
+        display: flex;
+    }
+
+    img {
         text-align: center;
-        max-width: 100%;
         object-fit: cover;
+        padding: 1rem;
+    }
+
+    .col-modal {
+        width: 50%;
+        align-self: center;
     }
 }
 </style>

@@ -48,10 +48,11 @@ export default {
 <template>
     <main class=" ">
         <div v-if="this.isModalOpen == true">
-            <CardModal :product="myModalProduct"  @close-modal="closeModal" />
+            <CardModal :product="myModalProduct" @close-modal="closeModal" />
         </div>
 
         <div class=" main_container container_75 flex-column">
+            <h6 v-if="this.state.myFavorite.length > 0" class="p-1" style="color: red;">Products that you like:</h6>
             <div v-if="this.state.myFavorite.length > 0" class="favorites-container col-6 text-center ">
                 <FavoritesItem :favorite="item" v-for="item in state.myFavorite" />
             </div>
@@ -93,7 +94,7 @@ export default {
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 10% auto;
     /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
