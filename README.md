@@ -16,3 +16,8 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 4) Sistemare il css - renderlo più pulito: cancella ciò che è inutile
 5) Provare a implementare una funzionalità carrello
 
+### Steps 26/03/2024
+1) Inserire l'html del modale
+2) Inserire il css (scss)
+3) Far sì che quando viene triggerata una funzione il modal si apre (display:none/block)
+4) Far sì che al Click sulla X il modale si chiuda (Stessa funzione?)
