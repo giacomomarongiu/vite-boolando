@@ -13,6 +13,7 @@ export default {
     data() {
         return {
             isModalOpen: false,
+            myModalProduct: null,
             state,
             //impotered
             //products,
@@ -21,8 +22,11 @@ export default {
         }
     },
     methods: {
-        modalToggle() {
+        showProduct(product) {
             console.log("$event");
+            console.log(product);
+            this.myModalProduct = product;
+            this.isModalOpen = true;
         }
     },
     created() {
@@ -36,18 +40,17 @@ export default {
 </script>
 
 <template>
-
     <main class=" ">
         <!--Modal Section-->
-        <button @click="this.isModalOpen = true">openModal</button>
+        <!--         <button @click="this.isModalOpen = true">openModal</button> -->
         <!-- The Modal -->
         <div v-if="this.isModalOpen == true">
             <div id="myModal" class="modal">
 
                 <!-- Modal content -->
                 <div class="modal-content">
-                    <span class="close" @click="this.isModalOpen=false">&times;</span>
-                    <p>QUI LA CARD</p>
+                    <span class="close" @click="this.isModalOpen = false">&times;</span>
+                    <p>{{ this.myModalProduct }}</p>
                 </div>
             </div>
         </div>
@@ -61,7 +64,7 @@ export default {
             </div>
 
             <div class="products-container row d-flex">
-                <ProductCard :product="product" v-for="product in state.products" @some-event="modalToggle()" />
+                <ProductCard :product="product" v-for="product in state.products" @some-event="showProduct" />
             </div>
         </div>
     </main>

@@ -13,9 +13,7 @@ export default {
     },
     data() {
         return {
-            state,
-            isModalOpen: false,
-            
+            state,       
         }
     },
     methods: {
@@ -24,16 +22,13 @@ export default {
             this.$parent.myFavoriteList();
         }, */
 
-        showModal(){
-            this.$emit('someEvent')
-        }
     },
 }
 </script>
 
 <template>
     <!-- Col/Card like Bootstrap-->
-    <div class="col-4 p-1" @click="showModal()">
+    <div class="col-4 p-1" @click=" this.$emit('someEvent',product)">
         <div class="card">
             <!-- Card divided Up e Bottom-->
             <!--Card UP-->
