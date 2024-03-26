@@ -2,7 +2,7 @@
 import CardBadges from "../components/CardBadges.vue";
 import { state } from '../state.js'
 export default {
-    emits:['someEvent'],
+    emits: ['showProduct'],
     name: "ProductCard",
     //Componente per inserire dinamicamente i badges
     components: {
@@ -28,7 +28,7 @@ export default {
 
 <template>
     <!-- Col/Card like Bootstrap-->
-    <div class="col-4 p-1" @click=" this.$emit('someEvent',product)">
+    <div class="col-4 p-1" @click=" this.$emit('showProduct',product)">
         <div class="card">
             <!-- Card divided Up e Bottom-->
             <!--Card UP-->

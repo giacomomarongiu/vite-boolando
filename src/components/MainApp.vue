@@ -2,6 +2,7 @@
 //import { products } from "../data.js"
 import ProductCard from "../components/ProductCard.vue";
 import FavoritesItem from "../components/FavoritesItem.vue";
+import CardModal from "./CardModal.vue"
 import { state } from '../state.js'
 
 export default {
@@ -9,6 +10,7 @@ export default {
     components: {
         ProductCard,
         FavoritesItem,
+        CardModal
     },
     data() {
         return {
@@ -27,6 +29,10 @@ export default {
             console.log(product);
             this.myModalProduct = product;
             this.isModalOpen = true;
+        },
+        closeModal() {
+            this.isModalOpen = false;
+
         }
     },
     created() {
@@ -41,30 +47,17 @@ export default {
 
 <template>
     <main class=" ">
-        <!--Modal Section-->
-        <!--         <button @click="this.isModalOpen = true">openModal</button> -->
-        <!-- The Modal -->
         <div v-if="this.isModalOpen == true">
-            <div id="myModal" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close" @click="this.isModalOpen = false">&times;</span>
-                    <p>{{ this.myModalProduct }}</p>
-                </div>
-            </div>
+            <CardModal :product="myModalProduct"  @close-modal="closeModal" />
         </div>
 
-
-
-        <div class="main_container container_75 flex-column">
-            <!--             <div>{{ state.message }}</div>-->
+        <div class=" main_container container_75 flex-column">
             <div v-if="this.state.myFavorite.length > 0" class="favorites-container col-6 text-center ">
                 <FavoritesItem :favorite="item" v-for="item in state.myFavorite" />
             </div>
 
             <div class="products-container row d-flex">
-                <ProductCard :product="product" v-for="product in state.products" @some-event="showProduct" />
+                <ProductCard :product="product" v-for="product in state.products" @show-product="showProduct" />
             </div>
         </div>
     </main>
