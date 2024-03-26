@@ -21,9 +21,9 @@ export default {
         }
     },
     methods: {
-/*         modalToggle() {
-            this.isModalOpen = this.isModalOpen ? true : false
-        } */
+        modalToggle() {
+            console.log("$event");
+        }
     },
     created() {
         //console.log(this.state);
@@ -61,7 +61,7 @@ export default {
             </div>
 
             <div class="products-container row d-flex">
-                <ProductCard :product="product" v-for="product in state.products" />
+                <ProductCard :product="product" v-for="product in state.products" @some-event="modalToggle()" />
             </div>
         </div>
     </main>

@@ -2,6 +2,7 @@
 import CardBadges from "../components/CardBadges.vue";
 import { state } from '../state.js'
 export default {
+    emits:['someEvent'],
     name: "ProductCard",
     //Componente per inserire dinamicamente i badges
     components: {
@@ -13,21 +14,26 @@ export default {
     data() {
         return {
             state,
+            isModalOpen: false,
+            
         }
     },
     methods: {
 /*         /** Funzione che eredita la funzionalità del componente genitore
-
         myFavoriteListChild() {
             this.$parent.myFavoriteList();
         }, */
+
+        showModal(){
+            this.$emit('someEvent')
+        }
     },
 }
 </script>
 
 <template>
     <!-- Col/Card like Bootstrap-->
-    <div class="col-4 p-1">
+    <div class="col-4 p-1" @click="showModal()">
         <div class="card">
             <!-- Card divided Up e Bottom-->
             <!--Card UP-->
