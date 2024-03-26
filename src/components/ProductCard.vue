@@ -28,7 +28,7 @@ export default {
 
 <template>
     <!-- Col/Card like Bootstrap-->
-    <div class="col-4 p-1" @click=" this.$emit('showProduct',product)">
+    <div class="col-4 p-1">
         <div class="card">
             <!-- Card divided Up e Bottom-->
             <!--Card UP-->
@@ -54,7 +54,7 @@ export default {
             </div>
 
             <!--Card BOTTOM-->
-            <div class="card_bottom">
+            <div class="card_bottom" @click=" this.$emit('showProduct', product)">
                 <p class="small_text">{{ product.brand }}</p>
                 <p class="text_bold">{{ product.description }}</p>
                 <p class="small_text">
